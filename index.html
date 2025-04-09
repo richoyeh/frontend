@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Driver Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div id="loader" class="loader" style="display:none;"></div> <!-- Loader -->
+
+  <div class="container">
+    <!-- Dashboard Tab -->
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Driver Dashboard</h2>
+        <button class="btn btn-primary" id="openFormBtn">Register New Driver</button>
+
+        <!-- Table to display drivers -->
+        <table id="driverTable" class="table mt-4">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Truck Type</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Driver data will be inserted here dynamically -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Dialog for Registration Form -->
+  <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true"
+    data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="formModalLabel">Register New Driver</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="closeModal">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="registrationForm" action="#" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name"
+                required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter your phone number"
+                required>
+            </div>
+            <div class="form-group">
+              <label for="truckType">Truck Type</label>
+              <select class="form-control" id="truckType" name="truckType" required>
+                <option value="">Select Truck Type</option>
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="fileUpload">Upload ID or Truck Document</label>
+              <input type="file" class="form-control-file" id="fileUpload" name="fileUpload"
+                accept="image/*,application/pdf" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <script src="scripts.js"></script>
+
+</body>
+
+</html>
