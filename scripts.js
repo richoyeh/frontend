@@ -56,7 +56,7 @@ document.getElementById('registrationForm').addEventListener('submit', async fun
     method: 'POST',
     body: formData
   });
-
+console.log(response)
   const data = await response.json();
   document.getElementById('loader').style.display = 'none';
 
