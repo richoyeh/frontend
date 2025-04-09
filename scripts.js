@@ -4,7 +4,7 @@ let driverData = []; // Store the fetched driver data
 async function fetchDriverData() {
   document.getElementById('loader').style.display = 'block';
   
-  const response = await fetch('http://localhost:5000/api/drivers');
+  const response = await fetch('https://backend-mbcb.vercel.app/api/drivers');
   const data = await response.json();
   driverData = data;
 
