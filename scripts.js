@@ -1,5 +1,5 @@
 let driverData = [];
-const endpoint = "https://backend-mbcb.vercel.app";
+const endpoint = "https://backend-one-iota-92.vercel.app";
 
 // Fetch driver data from backend
 async function fetchDriverData() {
