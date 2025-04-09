@@ -1,0 +1,17 @@
+# Driver Registration & Dashboard System
+
+## Description
+This project allows drivers to register and view their info in a dashboard. It is built using a full-stack approach with Node.js, Express, and MongoDB.
+
+## Setup
+
+### Backend (Node.js)
+1. Clone the repo.
+2. Run `npm install` to install dependencies.
+3. Run `node app.js` to start the backend server on port 5000.
+
+### Frontend
+1. Open `index.html` in a browser or deploy it on Vercel.
+
+## Optional: Live Demo
+[Live Link](https://frontend-nhitn6l51-richs-projects-7db8e6ae.vercel.app/)

@@ -5,23 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Driver Dashboard</title>
+  <link rel="shortcut icon" href="https://plus.unsplash.com/premium_photo-1664695368767-c42483a0bda1?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
 </head>
 
 <body>
-
   <div id="loader" class="loader" style="display:none;"></div> <!-- Loader -->
 
   <div class="container">
     <!-- Dashboard Tab -->
     <div class="row">
       <div class="col-md-12">
-        <h2>Driver Dashboard</h2>
-        <button class="btn btn-primary" id="openFormBtn">Register New Driver</button>
 
-        <!-- Table to display drivers -->
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Driver Dashboard</h2>
+          <button class="btn btn-primary" id="openFormBtn">Register New Driver</button>
+        </div>
         <table id="driverTable" class="table mt-4">
           <thead>
             <tr>
@@ -34,7 +35,6 @@
             </tr>
           </thead>
           <tbody>
-            <!-- Driver data will be inserted here dynamically -->
           </tbody>
         </table>
       </div>
@@ -44,7 +44,7 @@
   <!-- Modal Dialog for Registration Form -->
   <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true"
     data-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="formModalLabel">Register New Driver</h5>
@@ -72,17 +72,32 @@
               <label for="truckType">Truck Type</label>
               <select class="form-control" id="truckType" name="truckType" required>
                 <option value="">Select Truck Type</option>
-                <option value="Small">Small</option>
-                <option value="Medium">Medium</option>
-                <option value="Large">Large</option>
+                <option value="Pickup Trucks">Pickup Trucks</option>
+                <option value="Box Trucks">Box Trucks</option>
+                <option value="Tow Trucks">Tow Trucks</option>
+                <option value="Flatbed Trucks">Flatbed Trucks</option>
+                <option value="Dump Trucks">Dump Trucks</option>
+                <option value="Concrete Mixers">Concrete Mixers</option>
+                <option value="Refrigerated Trucks">Refrigerated Trucks</option>
+                <option value="Cement Trucks">Cement Trucks</option>
+                <option value="Tankers">Tankers</option>
+                <option value="Log Trucks">Log Trucks</option>
+                <option value="Garbage Trucks">Garbage Trucks</option>
+                <option value="Fire Trucks">Fire Trucks</option>
+                <option value="Refrigerated Trucks">Refrigerated Trucks</option>
+                <option value="Dump Trucks (Off-Road)">Dump Trucks (Off-Road)</option>
+                <option value="Utility Trucks">Utility Trucks</option>
+                <option value="Armored Trucks">Armored Trucks</option>
+                <option value="Military Transport Trucks">Military Transport Trucks</option>
               </select>
+
             </div>
             <div class="form-group">
               <label for="fileUpload">Upload ID or Truck Document</label>
               <input type="file" class="form-control-file" id="fileUpload" name="fileUpload"
                 accept="image/*,application/pdf" required>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Register</button>
+            <button type="submit" class="btn btn-primary btn-block">Submit New Form</button>
           </form>
         </div>
       </div>
